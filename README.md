@@ -14,6 +14,8 @@ You can also just use the command
 
 sudo kernelstub -a "button.lid_init_state=open"
 
+*since the move to kernel 5.15 this fix is somewhat broken. You will still need to add this but you will also need to add this to the end of the Options line /boot/efi/loader/entries/Pop_OS-current.conf then reboot.
+
 Next you may want to make it so that everytime you resume from suspend you dont see the kernel messages printing as x crashes and restarts due to a Nvidia/acpi/x conflict. This only happens when you are in a graphics mode that includes the discrete gpu. If you are only in the Intel graphics mode it does not happen.
 
 For this you will want to edit sysctl.conf, to do this:
@@ -24,4 +26,4 @@ Then, uncomment the "kernel.printk = 3 4 1 3" line.
 
 Now reboot.
 
-Please leave feedback and let me know it this helped or did not.
+Please leave feedback and let me know if this helped or did not.
