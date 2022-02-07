@@ -24,6 +24,10 @@ sudo nano /etc/sysctl.conf
 
 Then, uncomment the "kernel.printk = 3 4 1 3" line.
 
+For wifi:
+sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+change powersave=3 to powersave=0
+
 Now reboot.
 
 Please leave feedback and let me know if this helped or did not.
